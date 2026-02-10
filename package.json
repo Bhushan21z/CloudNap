@@ -1,0 +1,22 @@
+{
+  "name": "hibernate-2.0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"npm start --prefix backend\"",
+    "start": "concurrently \"npm run build --prefix frontend && npm run preview --prefix frontend\" \"npm start --prefix backend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-ec2": "^3.986.0",
+    "@aws-sdk/client-sts": "^3.986.0",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
