@@ -217,12 +217,16 @@ export default function SetupAWS({ onComplete }) {
                     </div>
 
                     <div className="aspect-video w-full rounded-2xl bg-black/40 flex items-center justify-center border border-white/5 relative overflow-hidden">
-                        <div className="text-center z-10">
-                            <p className="text-gray-500 mb-2">Tutorial video is coming soon!</p>
-                            <span className="text-xs text-primary-500/50 uppercase tracking-widest font-bold">cloudnap walkthrough</span>
+                        <video
+                            src="https://exam.pac.elitmus.com/reception_delivery/reception_delivery/fetch_image?img=Hibernate-video"
+                            controls
+                            className="w-full h-full object-cover"
+                        >
+                            Your browser does not support the video tag.
+                        </video>
+                        <div className="absolute bottom-4 right-4 z-10">
+                            <span className="text-[10px] text-white/30 uppercase tracking-[0.2em] font-black group-hover:text-primary-500 transition-colors">CloudNap Official Walkthrough</span>
                         </div>
-                        {/* Placeholder visual */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/5 to-purple-500/5" />
                     </div>
                 </div>
 
