@@ -7,7 +7,7 @@ set -euo pipefail
 
 # Your (Hibernate) AWS account details
 HIBERNATE_ACCOUNT_ID="711387126175"
-HIBERNATE_ROLE_NAME="hibernate-role"
+HIBERNATE_USER_NAME="hibernate-user"
 
 # Client-side resources
 POLICY_NAME="hibernateMinimumPolicy"
@@ -78,7 +78,7 @@ if [[ -z "$ROLE_ARN" || "$ROLE_ARN" == "None" ]]; then
         {
           \"Effect\": \"Allow\",
           \"Principal\": {
-            \"AWS\": \"arn:aws:iam::$HIBERNATE_ACCOUNT_ID:role/$HIBERNATE_ROLE_NAME\"
+            \"AWS\": \"arn:aws:iam::$HIBERNATE_ACCOUNT_ID:user/$HIBERNATE_USER_NAME\"
           },
           \"Action\": \"sts:AssumeRole\"
         }
