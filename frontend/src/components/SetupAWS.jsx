@@ -258,6 +258,7 @@ export default function SetupAWS({ onComplete }) {
                                         onChange={(e) => setRegion(e.target.value)}
                                     >
                                         <option value="ap-south-1">Asia Pacific (Mumbai) - ap-south-1</option>
+                                        <option value="ap-southeast-1">Asia Pacific (Singapore) - ap-southeast-1</option>
                                         <option value="us-east-1">US East (N. Virginia) - us-east-1</option>
                                         <option value="us-west-2">US West (Oregon) - us-west-2</option>
                                         <option value="eu-central-1">Europe (Frankfurt) - eu-central-1</option>
