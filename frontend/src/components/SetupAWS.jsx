@@ -11,7 +11,7 @@ export default function SetupAWS({ onComplete }) {
     const [loading, setLoading] = useState(false);
     const [copied, setCopied] = useState(false);
 
-    const setupCommand = `wget https://github.com/user-attachments/files/25282127/hibernate-setup.sh && chmod +x hibernate-setup.sh && ./hibernate-setup.sh`;
+    const setupCommand = `wget https://raw.githubusercontent.com/Bhushan21z/CloudNap/refs/heads/main/hibernate-setup.sh && chmod +x hibernate-setup.sh && ./hibernate-setup.sh`;
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(setupCommand);

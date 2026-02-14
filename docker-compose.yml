@@ -4,9 +4,9 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - "5002:5000"
     volumes:
-      - ~/.aws:/root/.aws:ro
+      - /home/ubuntu/projects/CloudNap/aws:/root/.aws:ro
       - ./backend/database.sqlite:/app/backend/database.sqlite
     environment:
       - JWT_SECRET=${JWT_SECRET:-hibernate-top-secret}
@@ -21,13 +21,6 @@ services:
       - "5173:5173"
     restart: unless-stopped
 
-  nginx:
-    image: nginx:alpine
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-    depends_on:
-      - frontend
-      - backend
-    restart: unless-stopped
+networks:
+  default:
+    name: app2-network

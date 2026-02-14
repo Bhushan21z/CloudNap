@@ -128,6 +128,10 @@ app.delete('/api/schedules/:id', authenticate, (req, res) => {
     res.json({ success: true });
 });
 
+app.get('/api/health', (req, res) => {
+    res.json({ success: true });
+});
+
 app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
